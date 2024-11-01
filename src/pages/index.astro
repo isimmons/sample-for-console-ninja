@@ -1,16 +1,18 @@
 ---
-
+import BaseLayout from '@layouts/BaseLayout.astro'
+import Button from '@components/ui/Button.astro'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Foobar">
+  <Button
+    onclick="myHandleClick()"
+    class="px-4 py-2 rounded-md"
+    variant="danger">Click me</Button
+  >
+</BaseLayout>
+
+<script is:inline>
+  function myHandleClick() {
+    console.log('Button clicked')
+  }
+</script>

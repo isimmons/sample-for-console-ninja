@@ -1,0 +1,8 @@
+body,
+html {
+  @apply text-slate-900;
+}
+
+p {
+  @apply my-2;
+}

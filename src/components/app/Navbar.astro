@@ -1,0 +1,21 @@
+---
+import Link from '@components/ui/Link.astro'
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/info', label: 'Info' },
+]
+---
+
+<nav class="h-8">
+  <ul class="flex gap-4">
+    {
+      links.map((link) => (
+        <li>
+          <Link href={link.href}>{link.label}</Link>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
